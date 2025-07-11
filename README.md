@@ -52,15 +52,6 @@ The lab environment included:
 3. Learn about Amazon Linux 2023 (the newer version mentioned)
 4. Experiment with other SSH clients and configurations
 
-flowchart TD
-    A[Start Lab] --> B[Access AWS Console]
-    B --> C{Windows/Mac?}
-    C -->|Windows| D[Use PuTTY with PPK]
-    C -->|Mac/Linux| E[Use Terminal SSH]
-    D & E --> F[Explore Man Pages]
-    F --> G[man man command]
-    G --> H[Study Headers]
-    H --> I[Exit with 'q']
 
     ## SSH Connection Flow
 
