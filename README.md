@@ -52,12 +52,12 @@ The lab environment included:
 3. Learn about Amazon Linux 2023 (the newer version mentioned)
 4. Experiment with other SSH clients and configurations
 
-sequenceDiagram
-    participant User
-    participant PuTTY
-    participant EC2
-    User->>PuTTY: 1. Download PPK
-    User->>PuTTY: 2. Configure with IP/PPK
-    PuTTY->>EC2: 3. Establish SSH Connection
-    EC2-->>PuTTY: Authentication
-    PuTTY-->>User: Connected to Amazon Linux
+flowchart TD
+    A[Start Lab] --> B[Access AWS Console]
+    B --> C{Windows/Mac?}
+    C -->|Windows| D[Use PuTTY with PPK]
+    C -->|Mac/Linux| E[Use Terminal SSH]
+    D & E --> F[Explore Man Pages]
+    F --> G[man man command]
+    G --> H[Study Headers]
+    H --> I[Exit with 'q']
