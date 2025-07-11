@@ -61,3 +61,16 @@ flowchart TD
     F --> G[man man command]
     G --> H[Study Headers]
     H --> I[Exit with 'q']
+
+    ## SSH Connection Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant PuTTY
+    participant EC2
+    User->>PuTTY: 1. Download PPK
+    User->>PuTTY: 2. Configure with IP/PPK
+    PuTTY->>EC2: 3. Establish SSH Connection
+    EC2-->>PuTTY: Authentication
+    PuTTY-->>User: Connected to Amazon Linux
